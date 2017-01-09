@@ -35,7 +35,6 @@
             this.BTN_Pesquisa = new System.Windows.Forms.Button();
             this.BTN_Home = new System.Windows.Forms.Button();
             this.Panel_Home = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.Panel_Pesquisa = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.Panel_Livro = new System.Windows.Forms.Panel();
@@ -44,12 +43,26 @@
             this.button1 = new System.Windows.Forms.Button();
             this.Panel_Editora = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.LB_Livro = new System.Windows.Forms.Label();
+            this.LB_Requisitante = new System.Windows.Forms.Label();
+            this.LB_Estado = new System.Windows.Forms.Label();
+            this.TB_Livro = new System.Windows.Forms.TextBox();
+            this.TB_Requisitante = new System.Windows.Forms.TextBox();
+            this.TB_Estado = new System.Windows.Forms.TextBox();
+            this.BTN_Entrega = new System.Windows.Forms.Button();
+            this.BTN_Devolucao = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.Panel_Home.SuspendLayout();
             this.Panel_Pesquisa.SuspendLayout();
             this.Panel_Livro.SuspendLayout();
             this.Panel_Autor.SuspendLayout();
             this.Panel_Editora.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -122,25 +135,17 @@
             // 
             // Panel_Home
             // 
-            this.Panel_Home.Controls.Add(this.button2);
+            this.Panel_Home.Controls.Add(this.panel3);
+            this.Panel_Home.Controls.Add(this.panel2);
             this.Panel_Home.Location = new System.Drawing.Point(53, 0);
             this.Panel_Home.Name = "Panel_Home";
             this.Panel_Home.Size = new System.Drawing.Size(815, 482);
             this.Panel_Home.TabIndex = 1;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(129, 53);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "home";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // Panel_Pesquisa
             // 
             this.Panel_Pesquisa.Controls.Add(this.button3);
-            this.Panel_Pesquisa.Location = new System.Drawing.Point(306, 6);
+            this.Panel_Pesquisa.Location = new System.Drawing.Point(1000, 6);
             this.Panel_Pesquisa.Name = "Panel_Pesquisa";
             this.Panel_Pesquisa.Size = new System.Drawing.Size(815, 482);
             this.Panel_Pesquisa.TabIndex = 2;
@@ -157,7 +162,7 @@
             // Panel_Livro
             // 
             this.Panel_Livro.Controls.Add(this.button4);
-            this.Panel_Livro.Location = new System.Drawing.Point(539, 6);
+            this.Panel_Livro.Location = new System.Drawing.Point(1000, 6);
             this.Panel_Livro.Name = "Panel_Livro";
             this.Panel_Livro.Size = new System.Drawing.Size(815, 482);
             this.Panel_Livro.TabIndex = 3;
@@ -174,7 +179,7 @@
             // Panel_Autor
             // 
             this.Panel_Autor.Controls.Add(this.button1);
-            this.Panel_Autor.Location = new System.Drawing.Point(340, 122);
+            this.Panel_Autor.Location = new System.Drawing.Point(1000, 122);
             this.Panel_Autor.Name = "Panel_Autor";
             this.Panel_Autor.Size = new System.Drawing.Size(815, 482);
             this.Panel_Autor.TabIndex = 4;
@@ -191,7 +196,7 @@
             // Panel_Editora
             // 
             this.Panel_Editora.Controls.Add(this.button5);
-            this.Panel_Editora.Location = new System.Drawing.Point(369, 303);
+            this.Panel_Editora.Location = new System.Drawing.Point(1000, 303);
             this.Panel_Editora.Name = "Panel_Editora";
             this.Panel_Editora.Size = new System.Drawing.Size(815, 482);
             this.Panel_Editora.TabIndex = 5;
@@ -204,6 +209,114 @@
             this.button5.TabIndex = 0;
             this.button5.Text = "editora";
             this.button5.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.BTN_Devolucao);
+            this.panel2.Controls.Add(this.BTN_Entrega);
+            this.panel2.Controls.Add(this.TB_Estado);
+            this.panel2.Controls.Add(this.TB_Requisitante);
+            this.panel2.Controls.Add(this.TB_Livro);
+            this.panel2.Controls.Add(this.LB_Estado);
+            this.panel2.Controls.Add(this.LB_Requisitante);
+            this.panel2.Controls.Add(this.LB_Livro);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(815, 106);
+            this.panel2.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 106);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(815, 376);
+            this.panel3.TabIndex = 3;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(815, 376);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // LB_Livro
+            // 
+            this.LB_Livro.AutoSize = true;
+            this.LB_Livro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Livro.Location = new System.Drawing.Point(6, 40);
+            this.LB_Livro.Name = "LB_Livro";
+            this.LB_Livro.Size = new System.Drawing.Size(44, 18);
+            this.LB_Livro.TabIndex = 0;
+            this.LB_Livro.Text = "Livro:";
+            // 
+            // LB_Requisitante
+            // 
+            this.LB_Requisitante.AutoSize = true;
+            this.LB_Requisitante.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Requisitante.Location = new System.Drawing.Point(6, 10);
+            this.LB_Requisitante.Name = "LB_Requisitante";
+            this.LB_Requisitante.Size = new System.Drawing.Size(93, 18);
+            this.LB_Requisitante.TabIndex = 1;
+            this.LB_Requisitante.Text = "Requisitante:";
+            // 
+            // LB_Estado
+            // 
+            this.LB_Estado.AutoSize = true;
+            this.LB_Estado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Estado.Location = new System.Drawing.Point(544, 10);
+            this.LB_Estado.Name = "LB_Estado";
+            this.LB_Estado.Size = new System.Drawing.Size(59, 18);
+            this.LB_Estado.TabIndex = 2;
+            this.LB_Estado.Text = "Estado:";
+            // 
+            // TB_Livro
+            // 
+            this.TB_Livro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Livro.Location = new System.Drawing.Point(96, 37);
+            this.TB_Livro.Name = "TB_Livro";
+            this.TB_Livro.Size = new System.Drawing.Size(441, 24);
+            this.TB_Livro.TabIndex = 3;
+            // 
+            // TB_Requisitante
+            // 
+            this.TB_Requisitante.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Requisitante.Location = new System.Drawing.Point(609, 7);
+            this.TB_Requisitante.Name = "TB_Requisitante";
+            this.TB_Requisitante.Size = new System.Drawing.Size(194, 24);
+            this.TB_Requisitante.TabIndex = 4;
+            // 
+            // TB_Estado
+            // 
+            this.TB_Estado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Estado.Location = new System.Drawing.Point(96, 7);
+            this.TB_Estado.Name = "TB_Estado";
+            this.TB_Estado.Size = new System.Drawing.Size(441, 24);
+            this.TB_Estado.TabIndex = 5;
+            // 
+            // BTN_Entrega
+            // 
+            this.BTN_Entrega.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Entrega.Location = new System.Drawing.Point(709, 67);
+            this.BTN_Entrega.Name = "BTN_Entrega";
+            this.BTN_Entrega.Size = new System.Drawing.Size(94, 31);
+            this.BTN_Entrega.TabIndex = 6;
+            this.BTN_Entrega.Text = "Entrega";
+            this.BTN_Entrega.UseVisualStyleBackColor = true;
+            // 
+            // BTN_Devolucao
+            // 
+            this.BTN_Devolucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Devolucao.Location = new System.Drawing.Point(609, 67);
+            this.BTN_Devolucao.Name = "BTN_Devolucao";
+            this.BTN_Devolucao.Size = new System.Drawing.Size(94, 31);
+            this.BTN_Devolucao.TabIndex = 7;
+            this.BTN_Devolucao.Text = "Devolução";
+            this.BTN_Devolucao.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -224,6 +337,10 @@
             this.Panel_Livro.ResumeLayout(false);
             this.Panel_Autor.ResumeLayout(false);
             this.Panel_Editora.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -237,7 +354,6 @@
         private System.Windows.Forms.Button BTN_Pesquisa;
         private System.Windows.Forms.Button BTN_Home;
         private System.Windows.Forms.Panel Panel_Home;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel Panel_Pesquisa;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel Panel_Livro;
@@ -246,6 +362,17 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel Panel_Editora;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button BTN_Devolucao;
+        private System.Windows.Forms.Button BTN_Entrega;
+        private System.Windows.Forms.TextBox TB_Estado;
+        private System.Windows.Forms.TextBox TB_Requisitante;
+        private System.Windows.Forms.TextBox TB_Livro;
+        private System.Windows.Forms.Label LB_Estado;
+        private System.Windows.Forms.Label LB_Requisitante;
+        private System.Windows.Forms.Label LB_Livro;
     }
 }
 
