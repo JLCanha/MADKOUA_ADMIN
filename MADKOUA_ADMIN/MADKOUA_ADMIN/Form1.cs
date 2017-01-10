@@ -19,7 +19,7 @@ namespace MADKOUA_ADMIN
             Panel_Autor.Visible = false;
             Panel_Editora.Visible = false;
             Panel_Livro.Visible = false;
-            Panel_Pesquisa.Visible = false;
+            
         }
 
         private void BTN_Home_Click(object sender, EventArgs e)
@@ -28,7 +28,7 @@ namespace MADKOUA_ADMIN
             Panel_Autor.Visible = false;
             Panel_Editora.Visible = false;
             Panel_Livro.Visible = false;
-            Panel_Pesquisa.Visible = false;
+            
         }
 
         private void BTN_Pesquisa_Click(object sender, EventArgs e)
@@ -37,7 +37,7 @@ namespace MADKOUA_ADMIN
             Panel_Autor.Visible = false;
             Panel_Editora.Visible = false;
             Panel_Livro.Visible = false;
-            Panel_Pesquisa.Visible = true;
+            
         }
 
         private void BTN_AddLivro_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace MADKOUA_ADMIN
             Panel_Autor.Visible = false;
             Panel_Editora.Visible = false;
             Panel_Livro.Visible = true;
-            Panel_Pesquisa.Visible = false;
+
         }
 
         private void BTN_AddAutor_Click(object sender, EventArgs e)
@@ -55,7 +55,7 @@ namespace MADKOUA_ADMIN
             Panel_Autor.Visible = true;
             Panel_Editora.Visible = false;
             Panel_Livro.Visible = false;
-            Panel_Pesquisa.Visible = false;
+
         }
 
         private void BTN_AddEditora_Click(object sender, EventArgs e)
@@ -64,7 +64,12 @@ namespace MADKOUA_ADMIN
             Panel_Autor.Visible = false;
             Panel_Editora.Visible = true;
             Panel_Livro.Visible = false;
-            Panel_Pesquisa.Visible = false;
+
+        }
+
+        private void Panel_Livro_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
