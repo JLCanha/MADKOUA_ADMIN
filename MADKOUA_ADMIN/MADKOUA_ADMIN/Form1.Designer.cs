@@ -37,14 +37,6 @@
             this.Panel_Home_DGV = new System.Windows.Forms.Panel();
             this.DGV_Home = new System.Windows.Forms.DataGridView();
             this.Panel_Home_Cabecalho = new System.Windows.Forms.Panel();
-            this.BTN_Devolucao = new System.Windows.Forms.Button();
-            this.BTN_Entrega = new System.Windows.Forms.Button();
-            this.TB_Estado = new System.Windows.Forms.TextBox();
-            this.TB_Requisitante = new System.Windows.Forms.TextBox();
-            this.TB_Livro = new System.Windows.Forms.TextBox();
-            this.LB_Estado = new System.Windows.Forms.Label();
-            this.LB_Requisitante = new System.Windows.Forms.Label();
-            this.LB_Livro = new System.Windows.Forms.Label();
             this.Panel_Livro = new System.Windows.Forms.Panel();
             this.Panel_Livro_DGV = new System.Windows.Forms.Panel();
             this.DGV_Livro = new System.Windows.Forms.DataGridView();
@@ -88,6 +80,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TB_Editora_Pesquisa = new System.Windows.Forms.TextBox();
+            this.LB_Livro = new System.Windows.Forms.Label();
+            this.LB_Requisitante = new System.Windows.Forms.Label();
+            this.LB_Estado = new System.Windows.Forms.Label();
+            this.TB_Livro = new System.Windows.Forms.TextBox();
+            this.TB_Requisitante = new System.Windows.Forms.TextBox();
+            this.TB_Estado = new System.Windows.Forms.TextBox();
+            this.BTN_Entrega = new System.Windows.Forms.Button();
+            this.BTN_Devolucao = new System.Windows.Forms.Button();
             this.Panel_Botoes.SuspendLayout();
             this.Panel_Home.SuspendLayout();
             this.Panel_Home_DGV.SuspendLayout();
@@ -115,7 +115,7 @@
             this.Panel_Botoes.Controls.Add(this.BTN_Home);
             this.Panel_Botoes.Dock = System.Windows.Forms.DockStyle.Left;
             this.Panel_Botoes.Location = new System.Drawing.Point(0, 0);
-            this.Panel_Botoes.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel_Botoes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel_Botoes.Name = "Panel_Botoes";
             this.Panel_Botoes.Size = new System.Drawing.Size(71, 593);
             this.Panel_Botoes.TabIndex = 0;
@@ -124,7 +124,7 @@
             // 
             this.BTN_AddEditora.Dock = System.Windows.Forms.DockStyle.Top;
             this.BTN_AddEditora.Location = new System.Drawing.Point(0, 195);
-            this.BTN_AddEditora.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_AddEditora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTN_AddEditora.Name = "BTN_AddEditora";
             this.BTN_AddEditora.Size = new System.Drawing.Size(71, 65);
             this.BTN_AddEditora.TabIndex = 4;
@@ -136,7 +136,7 @@
             // 
             this.BTN_AddAutor.Dock = System.Windows.Forms.DockStyle.Top;
             this.BTN_AddAutor.Location = new System.Drawing.Point(0, 130);
-            this.BTN_AddAutor.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_AddAutor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTN_AddAutor.Name = "BTN_AddAutor";
             this.BTN_AddAutor.Size = new System.Drawing.Size(71, 65);
             this.BTN_AddAutor.TabIndex = 3;
@@ -148,7 +148,7 @@
             // 
             this.BTN_AddLivro.Dock = System.Windows.Forms.DockStyle.Top;
             this.BTN_AddLivro.Location = new System.Drawing.Point(0, 65);
-            this.BTN_AddLivro.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_AddLivro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTN_AddLivro.Name = "BTN_AddLivro";
             this.BTN_AddLivro.Size = new System.Drawing.Size(71, 65);
             this.BTN_AddLivro.TabIndex = 2;
@@ -160,7 +160,7 @@
             // 
             this.BTN_Home.Dock = System.Windows.Forms.DockStyle.Top;
             this.BTN_Home.Location = new System.Drawing.Point(0, 0);
-            this.BTN_Home.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_Home.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTN_Home.Name = "BTN_Home";
             this.BTN_Home.Size = new System.Drawing.Size(71, 65);
             this.BTN_Home.TabIndex = 0;
@@ -172,8 +172,8 @@
             // 
             this.Panel_Home.Controls.Add(this.Panel_Home_DGV);
             this.Panel_Home.Controls.Add(this.Panel_Home_Cabecalho);
-            this.Panel_Home.Location = new System.Drawing.Point(1333, 0);
-            this.Panel_Home.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel_Home.Location = new System.Drawing.Point(71, 0);
+            this.Panel_Home.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel_Home.Name = "Panel_Home";
             this.Panel_Home.Size = new System.Drawing.Size(1087, 593);
             this.Panel_Home.TabIndex = 1;
@@ -183,7 +183,7 @@
             this.Panel_Home_DGV.Controls.Add(this.DGV_Home);
             this.Panel_Home_DGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel_Home_DGV.Location = new System.Drawing.Point(0, 130);
-            this.Panel_Home_DGV.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel_Home_DGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel_Home_DGV.Name = "Panel_Home_DGV";
             this.Panel_Home_DGV.Size = new System.Drawing.Size(1087, 463);
             this.Panel_Home_DGV.TabIndex = 3;
@@ -193,10 +193,11 @@
             this.DGV_Home.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Home.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGV_Home.Location = new System.Drawing.Point(0, 0);
-            this.DGV_Home.Margin = new System.Windows.Forms.Padding(4);
+            this.DGV_Home.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DGV_Home.Name = "DGV_Home";
             this.DGV_Home.Size = new System.Drawing.Size(1087, 463);
             this.DGV_Home.TabIndex = 0;
+            this.DGV_Home.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Home_CellContentClick);
             // 
             // Panel_Home_Cabecalho
             // 
@@ -210,102 +211,19 @@
             this.Panel_Home_Cabecalho.Controls.Add(this.LB_Livro);
             this.Panel_Home_Cabecalho.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Home_Cabecalho.Location = new System.Drawing.Point(0, 0);
-            this.Panel_Home_Cabecalho.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel_Home_Cabecalho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel_Home_Cabecalho.Name = "Panel_Home_Cabecalho";
             this.Panel_Home_Cabecalho.Size = new System.Drawing.Size(1087, 130);
             this.Panel_Home_Cabecalho.TabIndex = 2;
-            // 
-            // BTN_Devolucao
-            // 
-            this.BTN_Devolucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Devolucao.Location = new System.Drawing.Point(812, 82);
-            this.BTN_Devolucao.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_Devolucao.Name = "BTN_Devolucao";
-            this.BTN_Devolucao.Size = new System.Drawing.Size(125, 38);
-            this.BTN_Devolucao.TabIndex = 7;
-            this.BTN_Devolucao.Text = "Devolução";
-            this.BTN_Devolucao.UseVisualStyleBackColor = true;
-            // 
-            // BTN_Entrega
-            // 
-            this.BTN_Entrega.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Entrega.Location = new System.Drawing.Point(945, 82);
-            this.BTN_Entrega.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_Entrega.Name = "BTN_Entrega";
-            this.BTN_Entrega.Size = new System.Drawing.Size(125, 38);
-            this.BTN_Entrega.TabIndex = 6;
-            this.BTN_Entrega.Text = "Entrega";
-            this.BTN_Entrega.UseVisualStyleBackColor = true;
-            // 
-            // TB_Estado
-            // 
-            this.TB_Estado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Estado.Location = new System.Drawing.Point(128, 9);
-            this.TB_Estado.Margin = new System.Windows.Forms.Padding(4);
-            this.TB_Estado.Name = "TB_Estado";
-            this.TB_Estado.Size = new System.Drawing.Size(587, 29);
-            this.TB_Estado.TabIndex = 5;
-            // 
-            // TB_Requisitante
-            // 
-            this.TB_Requisitante.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Requisitante.Location = new System.Drawing.Point(812, 9);
-            this.TB_Requisitante.Margin = new System.Windows.Forms.Padding(4);
-            this.TB_Requisitante.Name = "TB_Requisitante";
-            this.TB_Requisitante.Size = new System.Drawing.Size(257, 29);
-            this.TB_Requisitante.TabIndex = 4;
-            // 
-            // TB_Livro
-            // 
-            this.TB_Livro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Livro.Location = new System.Drawing.Point(128, 46);
-            this.TB_Livro.Margin = new System.Windows.Forms.Padding(4);
-            this.TB_Livro.Name = "TB_Livro";
-            this.TB_Livro.Size = new System.Drawing.Size(587, 29);
-            this.TB_Livro.TabIndex = 3;
-            // 
-            // LB_Estado
-            // 
-            this.LB_Estado.AutoSize = true;
-            this.LB_Estado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_Estado.Location = new System.Drawing.Point(725, 12);
-            this.LB_Estado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LB_Estado.Name = "LB_Estado";
-            this.LB_Estado.Size = new System.Drawing.Size(73, 24);
-            this.LB_Estado.TabIndex = 2;
-            this.LB_Estado.Text = "Estado:";
-            // 
-            // LB_Requisitante
-            // 
-            this.LB_Requisitante.AutoSize = true;
-            this.LB_Requisitante.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_Requisitante.Location = new System.Drawing.Point(8, 12);
-            this.LB_Requisitante.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LB_Requisitante.Name = "LB_Requisitante";
-            this.LB_Requisitante.Size = new System.Drawing.Size(118, 24);
-            this.LB_Requisitante.TabIndex = 1;
-            this.LB_Requisitante.Text = "Requisitante:";
-            // 
-            // LB_Livro
-            // 
-            this.LB_Livro.AutoSize = true;
-            this.LB_Livro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_Livro.Location = new System.Drawing.Point(8, 49);
-            this.LB_Livro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LB_Livro.Name = "LB_Livro";
-            this.LB_Livro.Size = new System.Drawing.Size(55, 24);
-            this.LB_Livro.TabIndex = 0;
-            this.LB_Livro.Text = "Livro:";
             // 
             // Panel_Livro
             // 
             this.Panel_Livro.Controls.Add(this.Panel_Livro_DGV);
             this.Panel_Livro.Controls.Add(this.Panel_Livro_Top);
-            this.Panel_Livro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_Livro.Location = new System.Drawing.Point(71, 0);
-            this.Panel_Livro.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel_Livro.Location = new System.Drawing.Point(7100, 1000);
+            this.Panel_Livro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel_Livro.Name = "Panel_Livro";
-            this.Panel_Livro.Size = new System.Drawing.Size(1086, 593);
+            this.Panel_Livro.Size = new System.Drawing.Size(1087, 593);
             this.Panel_Livro.TabIndex = 3;
             // 
             // Panel_Livro_DGV
@@ -315,7 +233,7 @@
             this.Panel_Livro_DGV.Location = new System.Drawing.Point(0, 222);
             this.Panel_Livro_DGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Panel_Livro_DGV.Name = "Panel_Livro_DGV";
-            this.Panel_Livro_DGV.Size = new System.Drawing.Size(1086, 371);
+            this.Panel_Livro_DGV.Size = new System.Drawing.Size(1087, 371);
             this.Panel_Livro_DGV.TabIndex = 10;
             // 
             // DGV_Livro
@@ -326,7 +244,7 @@
             this.DGV_Livro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DGV_Livro.Name = "DGV_Livro";
             this.DGV_Livro.RowTemplate.Height = 24;
-            this.DGV_Livro.Size = new System.Drawing.Size(1086, 371);
+            this.DGV_Livro.Size = new System.Drawing.Size(1087, 371);
             this.DGV_Livro.TabIndex = 0;
             // 
             // Panel_Livro_Top
@@ -348,7 +266,7 @@
             this.Panel_Livro_Top.Location = new System.Drawing.Point(0, 0);
             this.Panel_Livro_Top.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Panel_Livro_Top.Name = "Panel_Livro_Top";
-            this.Panel_Livro_Top.Size = new System.Drawing.Size(1086, 222);
+            this.Panel_Livro_Top.Size = new System.Drawing.Size(1087, 222);
             this.Panel_Livro_Top.TabIndex = 9;
             // 
             // BTN_Livro_Cancelar
@@ -411,7 +329,7 @@
             // TB_Livro_NLivrosDisp
             // 
             this.TB_Livro_NLivrosDisp.Location = new System.Drawing.Point(295, 138);
-            this.TB_Livro_NLivrosDisp.Margin = new System.Windows.Forms.Padding(4);
+            this.TB_Livro_NLivrosDisp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TB_Livro_NLivrosDisp.Name = "TB_Livro_NLivrosDisp";
             this.TB_Livro_NLivrosDisp.Size = new System.Drawing.Size(779, 22);
             this.TB_Livro_NLivrosDisp.TabIndex = 0;
@@ -488,11 +406,10 @@
             // 
             this.Panel_Autor.Controls.Add(this.Panel_Autor_DGV);
             this.Panel_Autor.Controls.Add(this.Panel_Autor_Top);
-            this.Panel_Autor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_Autor.Location = new System.Drawing.Point(71, 0);
-            this.Panel_Autor.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel_Autor.Location = new System.Drawing.Point(7100, 1000);
+            this.Panel_Autor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel_Autor.Name = "Panel_Autor";
-            this.Panel_Autor.Size = new System.Drawing.Size(1086, 593);
+            this.Panel_Autor.Size = new System.Drawing.Size(1087, 593);
             this.Panel_Autor.TabIndex = 4;
             // 
             // Panel_Autor_DGV
@@ -502,7 +419,7 @@
             this.Panel_Autor_DGV.Location = new System.Drawing.Point(0, 188);
             this.Panel_Autor_DGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Panel_Autor_DGV.Name = "Panel_Autor_DGV";
-            this.Panel_Autor_DGV.Size = new System.Drawing.Size(1086, 405);
+            this.Panel_Autor_DGV.Size = new System.Drawing.Size(1087, 405);
             this.Panel_Autor_DGV.TabIndex = 1;
             // 
             // DGV_Autor
@@ -513,9 +430,8 @@
             this.DGV_Autor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DGV_Autor.Name = "DGV_Autor";
             this.DGV_Autor.RowTemplate.Height = 24;
-            this.DGV_Autor.Size = new System.Drawing.Size(1086, 405);
+            this.DGV_Autor.Size = new System.Drawing.Size(1087, 405);
             this.DGV_Autor.TabIndex = 0;
-            this.DGV_Autor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Autor_CellClick);
             // 
             // Panel_Autor_Top
             // 
@@ -532,7 +448,7 @@
             this.Panel_Autor_Top.Location = new System.Drawing.Point(0, 0);
             this.Panel_Autor_Top.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Panel_Autor_Top.Name = "Panel_Autor_Top";
-            this.Panel_Autor_Top.Size = new System.Drawing.Size(1086, 188);
+            this.Panel_Autor_Top.Size = new System.Drawing.Size(1087, 188);
             this.Panel_Autor_Top.TabIndex = 0;
             // 
             // BTN_Autor_Cancelar
@@ -639,8 +555,8 @@
             // 
             this.Panel_Editora.Controls.Add(this.Panel_Editora_DGV);
             this.Panel_Editora.Controls.Add(this.Panel_Editora_Top);
-            this.Panel_Editora.Location = new System.Drawing.Point(71, 0);
-            this.Panel_Editora.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel_Editora.Location = new System.Drawing.Point(7100, 1000);
+            this.Panel_Editora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel_Editora.Name = "Panel_Editora";
             this.Panel_Editora.Size = new System.Drawing.Size(1085, 593);
             this.Panel_Editora.TabIndex = 5;
@@ -665,7 +581,6 @@
             this.DGV_Editora.RowTemplate.Height = 24;
             this.DGV_Editora.Size = new System.Drawing.Size(1085, 419);
             this.DGV_Editora.TabIndex = 0;
-            this.DGV_Editora.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Editora_CellClick);
             // 
             // Panel_Editora_Top
             // 
@@ -781,6 +696,88 @@
             this.TB_Editora_Pesquisa.Size = new System.Drawing.Size(1067, 28);
             this.TB_Editora_Pesquisa.TabIndex = 0;
             // 
+            // LB_Livro
+            // 
+            this.LB_Livro.AutoSize = true;
+            this.LB_Livro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Livro.Location = new System.Drawing.Point(8, 49);
+            this.LB_Livro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LB_Livro.Name = "LB_Livro";
+            this.LB_Livro.Size = new System.Drawing.Size(55, 24);
+            this.LB_Livro.TabIndex = 0;
+            this.LB_Livro.Text = "Livro:";
+            // 
+            // LB_Requisitante
+            // 
+            this.LB_Requisitante.AutoSize = true;
+            this.LB_Requisitante.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Requisitante.Location = new System.Drawing.Point(8, 12);
+            this.LB_Requisitante.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LB_Requisitante.Name = "LB_Requisitante";
+            this.LB_Requisitante.Size = new System.Drawing.Size(118, 24);
+            this.LB_Requisitante.TabIndex = 1;
+            this.LB_Requisitante.Text = "Requisitante:";
+            // 
+            // LB_Estado
+            // 
+            this.LB_Estado.AutoSize = true;
+            this.LB_Estado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Estado.Location = new System.Drawing.Point(725, 12);
+            this.LB_Estado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LB_Estado.Name = "LB_Estado";
+            this.LB_Estado.Size = new System.Drawing.Size(73, 24);
+            this.LB_Estado.TabIndex = 2;
+            this.LB_Estado.Text = "Estado:";
+            // 
+            // TB_Livro
+            // 
+            this.TB_Livro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Livro.Location = new System.Drawing.Point(128, 46);
+            this.TB_Livro.Margin = new System.Windows.Forms.Padding(4);
+            this.TB_Livro.Name = "TB_Livro";
+            this.TB_Livro.Size = new System.Drawing.Size(587, 29);
+            this.TB_Livro.TabIndex = 3;
+            // 
+            // TB_Requisitante
+            // 
+            this.TB_Requisitante.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Requisitante.Location = new System.Drawing.Point(812, 9);
+            this.TB_Requisitante.Margin = new System.Windows.Forms.Padding(4);
+            this.TB_Requisitante.Name = "TB_Requisitante";
+            this.TB_Requisitante.Size = new System.Drawing.Size(257, 29);
+            this.TB_Requisitante.TabIndex = 4;
+            // 
+            // TB_Estado
+            // 
+            this.TB_Estado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Estado.Location = new System.Drawing.Point(128, 9);
+            this.TB_Estado.Margin = new System.Windows.Forms.Padding(4);
+            this.TB_Estado.Name = "TB_Estado";
+            this.TB_Estado.Size = new System.Drawing.Size(587, 29);
+            this.TB_Estado.TabIndex = 5;
+            // 
+            // BTN_Entrega
+            // 
+            this.BTN_Entrega.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Entrega.Location = new System.Drawing.Point(945, 82);
+            this.BTN_Entrega.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_Entrega.Name = "BTN_Entrega";
+            this.BTN_Entrega.Size = new System.Drawing.Size(125, 38);
+            this.BTN_Entrega.TabIndex = 6;
+            this.BTN_Entrega.Text = "Entrega";
+            this.BTN_Entrega.UseVisualStyleBackColor = true;
+            // 
+            // BTN_Devolucao
+            // 
+            this.BTN_Devolucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Devolucao.Location = new System.Drawing.Point(812, 82);
+            this.BTN_Devolucao.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_Devolucao.Name = "BTN_Devolucao";
+            this.BTN_Devolucao.Size = new System.Drawing.Size(125, 38);
+            this.BTN_Devolucao.TabIndex = 7;
+            this.BTN_Devolucao.Text = "Devolução";
+            this.BTN_Devolucao.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -791,7 +788,7 @@
             this.Controls.Add(this.Panel_Livro);
             this.Controls.Add(this.Panel_Home);
             this.Controls.Add(this.Panel_Botoes);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -834,14 +831,6 @@
         private System.Windows.Forms.Panel Panel_Home_DGV;
         private System.Windows.Forms.DataGridView DGV_Home;
         private System.Windows.Forms.Panel Panel_Home_Cabecalho;
-        private System.Windows.Forms.Button BTN_Devolucao;
-        private System.Windows.Forms.Button BTN_Entrega;
-        private System.Windows.Forms.TextBox TB_Estado;
-        private System.Windows.Forms.TextBox TB_Requisitante;
-        private System.Windows.Forms.TextBox TB_Livro;
-        private System.Windows.Forms.Label LB_Estado;
-        private System.Windows.Forms.Label LB_Requisitante;
-        private System.Windows.Forms.Label LB_Livro;
         private System.Windows.Forms.Label LB_NLivrosDisp;
         private System.Windows.Forms.Label LB_Edicao;
         private System.Windows.Forms.Label LB_Autor;
@@ -882,6 +871,14 @@
         private System.Windows.Forms.Button BTN_Autor_OK;
         private System.Windows.Forms.Button BTN_Editora_Cancelar;
         private System.Windows.Forms.Button BTN_Editora_OK;
+        private System.Windows.Forms.Button BTN_Devolucao;
+        private System.Windows.Forms.Button BTN_Entrega;
+        private System.Windows.Forms.TextBox TB_Estado;
+        private System.Windows.Forms.TextBox TB_Requisitante;
+        private System.Windows.Forms.TextBox TB_Livro;
+        private System.Windows.Forms.Label LB_Estado;
+        private System.Windows.Forms.Label LB_Requisitante;
+        private System.Windows.Forms.Label LB_Livro;
     }
 }
 
