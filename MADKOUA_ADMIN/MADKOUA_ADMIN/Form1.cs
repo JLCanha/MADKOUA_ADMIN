@@ -17,11 +17,17 @@ namespace MADKOUA_ADMIN
         DataTable TabelaLivros;
         DataTable TabelaAutores;
         DataTable TabelaEditoras;
+        DataTable TabelaHome;
 
         DataTable Requisicoes;
         DataTable Livros;
         DataTable Autores;
         DataTable Editoras;
+
+        Livro LivroSelecionado;
+        Autor AutorSelecionado;
+        Editora EditoraSelecionada;
+        Requisicao RequisicaoSelecionada;
 
         AdicionaBD AddBD;
 
@@ -36,6 +42,11 @@ namespace MADKOUA_ADMIN
 
             AddBD = new AdicionaBD();
 
+            LivroSelecionado = new Livro();
+            AutorSelecionado = new Autor();
+            EditoraSelecionada = new Editora();
+            RequisicaoSelecionada = new Requisicao();
+
         }
         #endregion
 
@@ -49,6 +60,7 @@ namespace MADKOUA_ADMIN
             Autores = Autor.ListaAutores();
             Editoras = Editora.ListaEditoras();
 
+            DGV_Home.DataSource = Requisicoes;
             DGV_Livro.DataSource = Livros;
             DGV_Editora.DataSource = Editoras;
             DGV_Autor.DataSource = Autores;
@@ -64,16 +76,6 @@ namespace MADKOUA_ADMIN
             Panel_Autor.Visible = false;
             Panel_Editora.Visible = false;
             Panel_Livro.Visible = false;
-
-        }
-
-        private void BTN_Pesquisa_Click(object sender, EventArgs e)
-        {
-            Panel_Home.Visible = false;
-            Panel_Autor.Visible = false;
-            Panel_Editora.Visible = false;
-            Panel_Livro.Visible = false;
-
         }
 
         private void BTN_AddLivro_Click(object sender, EventArgs e)
@@ -82,7 +84,6 @@ namespace MADKOUA_ADMIN
             Panel_Autor.Visible = false;
             Panel_Editora.Visible = false;
             Panel_Livro.Visible = true;
-
         }
 
         private void BTN_AddAutor_Click(object sender, EventArgs e)
@@ -91,7 +92,6 @@ namespace MADKOUA_ADMIN
             Panel_Autor.Visible = true;
             Panel_Editora.Visible = false;
             Panel_Livro.Visible = false;
-
         }
 
         private void BTN_AddEditora_Click(object sender, EventArgs e)
@@ -100,13 +100,33 @@ namespace MADKOUA_ADMIN
             Panel_Autor.Visible = false;
             Panel_Editora.Visible = true;
             Panel_Livro.Visible = false;
-
         }
 
 
 
+        #endregion
 
+        #region Home
 
+        private void BTN_Home_Devolucao_Click(object sender, EventArgs e)
+        {
+            Requisicao.MudaEstado(RequisicaoSelecionada.ID, "DevolvidoABib");
+            Livro.IncrementaNLivrosDisp(RequisicaoSelecionada.livro.ID);
+        }
+
+        private void BTN_Home_Entrega_Click(object sender, EventArgs e)
+        {
+            Requisicao.MudaEstado(RequisicaoSelecionada.ID, "PorDevolver");
+        }
+
+        private void DGV_Home_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int RowIndex = DGV_Home.SelectedCells[0].RowIndex;
+            RequisicaoSelecionada.ID = (int)DGV_Home.Rows[RowIndex].Cells["ID"].Value;
+            TB_Home_Requisitante.Text = RequisicaoSelecionada.requisitante.Nome;
+            TB_Home_Livro.Text = RequisicaoSelecionada.livro.Titulo;
+            TB_Home_Estado.Text = RequisicaoSelecionada.Estado;
+        }
 
         #endregion
 
@@ -142,6 +162,14 @@ namespace MADKOUA_ADMIN
         {
             AddBD.AdicionaAutor(TB_Autor_Nome.Text, TB_Autor_Apelido.Text);
             LimpaInsercaoAutor();
+        }
+
+        private void DGV_Autor_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int RowIndex = DGV_Autor.SelectedCells[0].RowIndex;
+            AutorSelecionado.ID = (int)DGV_Autor.Rows[RowIndex].Cells["ID"].Value;
+            TB_Autor_Nome.Text = AutorSelecionado.Nome;
+            TB_Autor_Apelido.Text = AutorSelecionado.Apelido;
         }
 
         private void LimpaInsercaoAutor()
@@ -189,6 +217,14 @@ namespace MADKOUA_ADMIN
 
         }
 
+        private void DGV_Editora_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int RowIndex = DGV_Editora.SelectedCells[0].RowIndex;
+            EditoraSelecionada.ID = (int)DGV_Editora.Rows[RowIndex].Cells["ID"].Value;
+            TB_Editora_Nome.Text = EditoraSelecionada.Nome;
+            TB_Editora_Morada.Text = EditoraSelecionada.Morada;
+        }
+
         private void LimpaInsercaoEditora()
         {
             BTN_Editora_Cancelar.Visible = false;
@@ -217,9 +253,8 @@ namespace MADKOUA_ADMIN
 
         }
 
-        private void DGV_Home_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        
 
-        }
+        
     }
 }
