@@ -118,7 +118,42 @@ namespace MADKOUA_ADMIN
 
         #region Autor
 
+        private void BTN_Autor_Eliminar_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void BTN_Autor_Inserir_Click(object sender, EventArgs e)
+        {
+            BTN_Autor_OK.Visible = true;
+            BTN_Autor_Cancelar.Visible = true;
+            BTN_Autor_Inserir.Enabled = false;
+            BTN_Autor_Eliminar.Enabled = false;
+            TB_Autor_Pesquisa.Enabled = false;
+            DGV_Autor.Enabled = false;
+        }
+
+        private void BTN_Autor_Cancelar_Click(object sender, EventArgs e)
+        {
+            LimpaInsercaoAutor();
+        }
+
+        private void BTN_Autor_OK_Click(object sender, EventArgs e)
+        {
+            AddBD.AdicionaAutor(TB_Autor_Nome.Text, TB_Autor_Apelido.Text);
+            LimpaInsercaoAutor();
+        }
+
+        private void LimpaInsercaoAutor()
+        {
+            BTN_Autor_Cancelar.Visible = false;
+            BTN_Autor_OK.Visible = false;
+            BTN_Autor_Inserir.Enabled = true;
+            BTN_Autor_Eliminar.Enabled = true;
+            TB_Autor_Pesquisa.Enabled = true;
+            TB_Autor_Nome.Text = "";
+            TB_Autor_Apelido.Text = "";
+        }
 
         #endregion
 
@@ -166,5 +201,22 @@ namespace MADKOUA_ADMIN
         }
 
         #endregion
+
+        private void TB_Autor_Pesquisa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TB_Autor_Nome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TB_Autor_Apelido_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
