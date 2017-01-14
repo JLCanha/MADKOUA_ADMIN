@@ -23,6 +23,10 @@ namespace MADKOUA_ADMIN
         DataTable Autores;
         DataTable Editoras;
 
+        Livro LivroSelecionado;
+        Autor AutorSelecionado;
+        Editora EditoraSelecionada;
+
         AdicionaBD AddBD;
 
         #region Construtor
@@ -35,6 +39,9 @@ namespace MADKOUA_ADMIN
             Panel_Livro.Visible = false;
 
             AddBD = new AdicionaBD();
+            LivroSelecionado = new Livro();
+            AutorSelecionado = new Autor();
+            EditoraSelecionada = new Editora();
 
         }
         #endregion
@@ -155,6 +162,15 @@ namespace MADKOUA_ADMIN
             TB_Autor_Apelido.Text = "";
         }
 
+
+        private void DGV_Autor_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int RowIndex = DGV_Autor.SelectedCells[0].RowIndex;
+            AutorSelecionado.ID = (int)DGV_Autor.Rows[RowIndex].Cells["ID"].Value;
+            TB_Autor_Nome.Text = AutorSelecionado.Nome;
+            TB_Autor_Apelido.Text = AutorSelecionado.Apelido;
+        }
+
         #endregion
 
         #region Editora
@@ -200,6 +216,14 @@ namespace MADKOUA_ADMIN
             TB_Editora_Morada.Text = "";
         }
 
+        private void DGV_Editora_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int RowIndex = DGV_Editora.SelectedCells[0].RowIndex;
+            EditoraSelecionada.ID = (int)DGV_Editora.Rows[RowIndex].Cells["ID"].Value;
+            TB_Editora_Nome.Text = EditoraSelecionada.Nome;
+            TB_Editora_Morada.Text = EditoraSelecionada.Morada;
+        }
+
         #endregion
 
         private void TB_Autor_Pesquisa_TextChanged(object sender, EventArgs e)
@@ -216,7 +240,5 @@ namespace MADKOUA_ADMIN
         {
 
         }
-
-
     }
 }
