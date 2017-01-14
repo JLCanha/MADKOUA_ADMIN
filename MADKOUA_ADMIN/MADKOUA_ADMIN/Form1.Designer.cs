@@ -46,35 +46,65 @@
             this.LB_Requisitante = new System.Windows.Forms.Label();
             this.LB_Livro = new System.Windows.Forms.Label();
             this.Panel_Livro = new System.Windows.Forms.Panel();
-            this.LB_NLivrosDisp = new System.Windows.Forms.Label();
-            this.LB_Edicao = new System.Windows.Forms.Label();
-            this.LB_Autor = new System.Windows.Forms.Label();
-            this.LB_Titulo = new System.Windows.Forms.Label();
-            this.TB_Livro_NLivrosDisp = new System.Windows.Forms.TextBox();
-            this.Panel_Autor = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Panel_Editora = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.TB_Livro_Edicao = new System.Windows.Forms.TextBox();
-            this.TB_Livro_Autor = new System.Windows.Forms.TextBox();
-            this.TB_Livro_Titulo = new System.Windows.Forms.TextBox();
-            this.TB_Livro_Pesquisa = new System.Windows.Forms.TextBox();
-            this.Panel_Livro_Top = new System.Windows.Forms.Panel();
             this.Panel_Livro_DGV = new System.Windows.Forms.Panel();
             this.DGV_Livro = new System.Windows.Forms.DataGridView();
-            this.BTN_Livro_Eliminar = new System.Windows.Forms.Button();
+            this.Panel_Livro_Top = new System.Windows.Forms.Panel();
             this.BTN_Livro_Inserir = new System.Windows.Forms.Button();
+            this.BTN_Livro_Eliminar = new System.Windows.Forms.Button();
+            this.TB_Livro_Pesquisa = new System.Windows.Forms.TextBox();
+            this.TB_Livro_NLivrosDisp = new System.Windows.Forms.TextBox();
+            this.TB_Livro_Titulo = new System.Windows.Forms.TextBox();
+            this.LB_Titulo = new System.Windows.Forms.Label();
+            this.TB_Livro_Autor = new System.Windows.Forms.TextBox();
+            this.LB_Autor = new System.Windows.Forms.Label();
+            this.TB_Livro_Edicao = new System.Windows.Forms.TextBox();
+            this.LB_Edicao = new System.Windows.Forms.Label();
+            this.LB_NLivrosDisp = new System.Windows.Forms.Label();
+            this.Panel_Autor = new System.Windows.Forms.Panel();
+            this.Panel_Editora = new System.Windows.Forms.Panel();
+            this.Panel_Autor_Top = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TB_Autor_Pesquisa = new System.Windows.Forms.TextBox();
+            this.Panel_Autor_DGV = new System.Windows.Forms.Panel();
+            this.BTN_Autor_Inserir = new System.Windows.Forms.Button();
+            this.BTN_Autor_Eliminar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.DGV_Autor = new System.Windows.Forms.DataGridView();
+            this.Panel_Editora_Top = new System.Windows.Forms.Panel();
+            this.Panel_Editora_DGV = new System.Windows.Forms.Panel();
+            this.DGV_Editora = new System.Windows.Forms.DataGridView();
+            this.TB_Editora_Pesquisa = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.BTN_Editora_Inserir = new System.Windows.Forms.Button();
+            this.BTN_Editora_Eliminar = new System.Windows.Forms.Button();
+            this.BTN_Livro_OK = new System.Windows.Forms.Button();
+            this.BTN_Livro_Cancelar = new System.Windows.Forms.Button();
+            this.BTN_Autor_Cancelar = new System.Windows.Forms.Button();
+            this.BTN_Autor_OK = new System.Windows.Forms.Button();
+            this.BTN_Editora_Cancelar = new System.Windows.Forms.Button();
+            this.BTN_Editora_OK = new System.Windows.Forms.Button();
             this.Panel_Botoes.SuspendLayout();
             this.Panel_Home.SuspendLayout();
             this.Panel_Home_DGV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Home)).BeginInit();
             this.Panel_Home_Cabecalho.SuspendLayout();
             this.Panel_Livro.SuspendLayout();
-            this.Panel_Autor.SuspendLayout();
-            this.Panel_Editora.SuspendLayout();
-            this.Panel_Livro_Top.SuspendLayout();
             this.Panel_Livro_DGV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Livro)).BeginInit();
+            this.Panel_Livro_Top.SuspendLayout();
+            this.Panel_Autor.SuspendLayout();
+            this.Panel_Editora.SuspendLayout();
+            this.Panel_Autor_Top.SuspendLayout();
+            this.Panel_Autor_DGV.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Autor)).BeginInit();
+            this.Panel_Editora_Top.SuspendLayout();
+            this.Panel_Editora_DGV.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Editora)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_Botoes
@@ -278,127 +308,29 @@
             this.Panel_Livro.TabIndex = 3;
             this.Panel_Livro.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_Livro_Paint);
             // 
-            // LB_NLivrosDisp
+            // Panel_Livro_DGV
             // 
-            this.LB_NLivrosDisp.AutoSize = true;
-            this.LB_NLivrosDisp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_NLivrosDisp.Location = new System.Drawing.Point(29, 136);
-            this.LB_NLivrosDisp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LB_NLivrosDisp.Name = "LB_NLivrosDisp";
-            this.LB_NLivrosDisp.Size = new System.Drawing.Size(258, 24);
-            this.LB_NLivrosDisp.TabIndex = 4;
-            this.LB_NLivrosDisp.Text = "Número de livros disponíveis:";
+            this.Panel_Livro_DGV.Controls.Add(this.DGV_Livro);
+            this.Panel_Livro_DGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_Livro_DGV.Location = new System.Drawing.Point(0, 222);
+            this.Panel_Livro_DGV.Name = "Panel_Livro_DGV";
+            this.Panel_Livro_DGV.Size = new System.Drawing.Size(1087, 371);
+            this.Panel_Livro_DGV.TabIndex = 10;
             // 
-            // LB_Edicao
+            // DGV_Livro
             // 
-            this.LB_Edicao.AutoSize = true;
-            this.LB_Edicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_Edicao.Location = new System.Drawing.Point(29, 113);
-            this.LB_Edicao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LB_Edicao.Name = "LB_Edicao";
-            this.LB_Edicao.Size = new System.Drawing.Size(74, 24);
-            this.LB_Edicao.TabIndex = 3;
-            this.LB_Edicao.Text = "Edição:";
-            // 
-            // LB_Autor
-            // 
-            this.LB_Autor.AutoSize = true;
-            this.LB_Autor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_Autor.Location = new System.Drawing.Point(29, 89);
-            this.LB_Autor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LB_Autor.Name = "LB_Autor";
-            this.LB_Autor.Size = new System.Drawing.Size(60, 24);
-            this.LB_Autor.TabIndex = 2;
-            this.LB_Autor.Text = "Autor:";
-            // 
-            // LB_Titulo
-            // 
-            this.LB_Titulo.AutoSize = true;
-            this.LB_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_Titulo.Location = new System.Drawing.Point(29, 65);
-            this.LB_Titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LB_Titulo.Name = "LB_Titulo";
-            this.LB_Titulo.Size = new System.Drawing.Size(61, 24);
-            this.LB_Titulo.TabIndex = 1;
-            this.LB_Titulo.Text = "Titulo:";
-            // 
-            // TB_Livro_NLivrosDisp
-            // 
-            this.TB_Livro_NLivrosDisp.Location = new System.Drawing.Point(295, 138);
-            this.TB_Livro_NLivrosDisp.Margin = new System.Windows.Forms.Padding(4);
-            this.TB_Livro_NLivrosDisp.Name = "TB_Livro_NLivrosDisp";
-            this.TB_Livro_NLivrosDisp.Size = new System.Drawing.Size(779, 22);
-            this.TB_Livro_NLivrosDisp.TabIndex = 0;
-            // 
-            // Panel_Autor
-            // 
-            this.Panel_Autor.Controls.Add(this.button1);
-            this.Panel_Autor.Location = new System.Drawing.Point(1333, 150);
-            this.Panel_Autor.Margin = new System.Windows.Forms.Padding(4);
-            this.Panel_Autor.Name = "Panel_Autor";
-            this.Panel_Autor.Size = new System.Drawing.Size(1087, 593);
-            this.Panel_Autor.TabIndex = 4;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(143, 81);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "autor";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // Panel_Editora
-            // 
-            this.Panel_Editora.Controls.Add(this.button5);
-            this.Panel_Editora.Location = new System.Drawing.Point(1333, 373);
-            this.Panel_Editora.Margin = new System.Windows.Forms.Padding(4);
-            this.Panel_Editora.Name = "Panel_Editora";
-            this.Panel_Editora.Size = new System.Drawing.Size(1087, 593);
-            this.Panel_Editora.TabIndex = 5;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(119, 94);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 28);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "editora";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // TB_Livro_Edicao
-            // 
-            this.TB_Livro_Edicao.Location = new System.Drawing.Point(295, 113);
-            this.TB_Livro_Edicao.Name = "TB_Livro_Edicao";
-            this.TB_Livro_Edicao.Size = new System.Drawing.Size(779, 22);
-            this.TB_Livro_Edicao.TabIndex = 5;
-            // 
-            // TB_Livro_Autor
-            // 
-            this.TB_Livro_Autor.Location = new System.Drawing.Point(295, 89);
-            this.TB_Livro_Autor.Name = "TB_Livro_Autor";
-            this.TB_Livro_Autor.Size = new System.Drawing.Size(779, 22);
-            this.TB_Livro_Autor.TabIndex = 6;
-            // 
-            // TB_Livro_Titulo
-            // 
-            this.TB_Livro_Titulo.Location = new System.Drawing.Point(295, 65);
-            this.TB_Livro_Titulo.Name = "TB_Livro_Titulo";
-            this.TB_Livro_Titulo.Size = new System.Drawing.Size(779, 22);
-            this.TB_Livro_Titulo.TabIndex = 7;
-            // 
-            // TB_Livro_Pesquisa
-            // 
-            this.TB_Livro_Pesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Livro_Pesquisa.Location = new System.Drawing.Point(33, 16);
-            this.TB_Livro_Pesquisa.Name = "TB_Livro_Pesquisa";
-            this.TB_Livro_Pesquisa.Size = new System.Drawing.Size(1041, 28);
-            this.TB_Livro_Pesquisa.TabIndex = 8;
+            this.DGV_Livro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Livro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DGV_Livro.Location = new System.Drawing.Point(0, 0);
+            this.DGV_Livro.Name = "DGV_Livro";
+            this.DGV_Livro.RowTemplate.Height = 24;
+            this.DGV_Livro.Size = new System.Drawing.Size(1087, 371);
+            this.DGV_Livro.TabIndex = 0;
             // 
             // Panel_Livro_Top
             // 
+            this.Panel_Livro_Top.Controls.Add(this.BTN_Livro_Cancelar);
+            this.Panel_Livro_Top.Controls.Add(this.BTN_Livro_OK);
             this.Panel_Livro_Top.Controls.Add(this.BTN_Livro_Inserir);
             this.Panel_Livro_Top.Controls.Add(this.BTN_Livro_Eliminar);
             this.Panel_Livro_Top.Controls.Add(this.TB_Livro_Pesquisa);
@@ -413,45 +345,397 @@
             this.Panel_Livro_Top.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Livro_Top.Location = new System.Drawing.Point(0, 0);
             this.Panel_Livro_Top.Name = "Panel_Livro_Top";
-            this.Panel_Livro_Top.Size = new System.Drawing.Size(1087, 228);
+            this.Panel_Livro_Top.Size = new System.Drawing.Size(1087, 222);
             this.Panel_Livro_Top.TabIndex = 9;
             // 
-            // Panel_Livro_DGV
+            // BTN_Livro_Inserir
             // 
-            this.Panel_Livro_DGV.Controls.Add(this.DGV_Livro);
-            this.Panel_Livro_DGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_Livro_DGV.Location = new System.Drawing.Point(0, 228);
-            this.Panel_Livro_DGV.Name = "Panel_Livro_DGV";
-            this.Panel_Livro_DGV.Size = new System.Drawing.Size(1087, 365);
-            this.Panel_Livro_DGV.TabIndex = 10;
-            // 
-            // DGV_Livro
-            // 
-            this.DGV_Livro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Livro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DGV_Livro.Location = new System.Drawing.Point(0, 0);
-            this.DGV_Livro.Name = "DGV_Livro";
-            this.DGV_Livro.RowTemplate.Height = 24;
-            this.DGV_Livro.Size = new System.Drawing.Size(1087, 365);
-            this.DGV_Livro.TabIndex = 0;
+            this.BTN_Livro_Inserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Livro_Inserir.Location = new System.Drawing.Point(868, 177);
+            this.BTN_Livro_Inserir.Name = "BTN_Livro_Inserir";
+            this.BTN_Livro_Inserir.Size = new System.Drawing.Size(100, 32);
+            this.BTN_Livro_Inserir.TabIndex = 10;
+            this.BTN_Livro_Inserir.Text = "Inserir";
+            this.BTN_Livro_Inserir.UseVisualStyleBackColor = true;
             // 
             // BTN_Livro_Eliminar
             // 
-            this.BTN_Livro_Eliminar.Location = new System.Drawing.Point(984, 192);
+            this.BTN_Livro_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Livro_Eliminar.Location = new System.Drawing.Point(974, 177);
             this.BTN_Livro_Eliminar.Name = "BTN_Livro_Eliminar";
-            this.BTN_Livro_Eliminar.Size = new System.Drawing.Size(90, 30);
+            this.BTN_Livro_Eliminar.Size = new System.Drawing.Size(100, 32);
             this.BTN_Livro_Eliminar.TabIndex = 9;
             this.BTN_Livro_Eliminar.Text = "Eliminar";
             this.BTN_Livro_Eliminar.UseVisualStyleBackColor = true;
             // 
-            // BTN_Livro_Inserir
+            // TB_Livro_Pesquisa
             // 
-            this.BTN_Livro_Inserir.Location = new System.Drawing.Point(888, 192);
-            this.BTN_Livro_Inserir.Name = "BTN_Livro_Inserir";
-            this.BTN_Livro_Inserir.Size = new System.Drawing.Size(90, 30);
-            this.BTN_Livro_Inserir.TabIndex = 10;
-            this.BTN_Livro_Inserir.Text = "Inserir";
-            this.BTN_Livro_Inserir.UseVisualStyleBackColor = true;
+            this.TB_Livro_Pesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Livro_Pesquisa.Location = new System.Drawing.Point(33, 16);
+            this.TB_Livro_Pesquisa.Name = "TB_Livro_Pesquisa";
+            this.TB_Livro_Pesquisa.Size = new System.Drawing.Size(1041, 28);
+            this.TB_Livro_Pesquisa.TabIndex = 8;
+            // 
+            // TB_Livro_NLivrosDisp
+            // 
+            this.TB_Livro_NLivrosDisp.Location = new System.Drawing.Point(295, 138);
+            this.TB_Livro_NLivrosDisp.Margin = new System.Windows.Forms.Padding(4);
+            this.TB_Livro_NLivrosDisp.Name = "TB_Livro_NLivrosDisp";
+            this.TB_Livro_NLivrosDisp.Size = new System.Drawing.Size(779, 22);
+            this.TB_Livro_NLivrosDisp.TabIndex = 0;
+            // 
+            // TB_Livro_Titulo
+            // 
+            this.TB_Livro_Titulo.Location = new System.Drawing.Point(295, 65);
+            this.TB_Livro_Titulo.Name = "TB_Livro_Titulo";
+            this.TB_Livro_Titulo.Size = new System.Drawing.Size(779, 22);
+            this.TB_Livro_Titulo.TabIndex = 7;
+            // 
+            // LB_Titulo
+            // 
+            this.LB_Titulo.AutoSize = true;
+            this.LB_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Titulo.Location = new System.Drawing.Point(29, 65);
+            this.LB_Titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LB_Titulo.Name = "LB_Titulo";
+            this.LB_Titulo.Size = new System.Drawing.Size(61, 24);
+            this.LB_Titulo.TabIndex = 1;
+            this.LB_Titulo.Text = "Titulo:";
+            // 
+            // TB_Livro_Autor
+            // 
+            this.TB_Livro_Autor.Location = new System.Drawing.Point(295, 89);
+            this.TB_Livro_Autor.Name = "TB_Livro_Autor";
+            this.TB_Livro_Autor.Size = new System.Drawing.Size(779, 22);
+            this.TB_Livro_Autor.TabIndex = 6;
+            // 
+            // LB_Autor
+            // 
+            this.LB_Autor.AutoSize = true;
+            this.LB_Autor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Autor.Location = new System.Drawing.Point(29, 89);
+            this.LB_Autor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LB_Autor.Name = "LB_Autor";
+            this.LB_Autor.Size = new System.Drawing.Size(60, 24);
+            this.LB_Autor.TabIndex = 2;
+            this.LB_Autor.Text = "Autor:";
+            // 
+            // TB_Livro_Edicao
+            // 
+            this.TB_Livro_Edicao.Location = new System.Drawing.Point(295, 113);
+            this.TB_Livro_Edicao.Name = "TB_Livro_Edicao";
+            this.TB_Livro_Edicao.Size = new System.Drawing.Size(779, 22);
+            this.TB_Livro_Edicao.TabIndex = 5;
+            // 
+            // LB_Edicao
+            // 
+            this.LB_Edicao.AutoSize = true;
+            this.LB_Edicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Edicao.Location = new System.Drawing.Point(29, 113);
+            this.LB_Edicao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LB_Edicao.Name = "LB_Edicao";
+            this.LB_Edicao.Size = new System.Drawing.Size(74, 24);
+            this.LB_Edicao.TabIndex = 3;
+            this.LB_Edicao.Text = "Edição:";
+            // 
+            // LB_NLivrosDisp
+            // 
+            this.LB_NLivrosDisp.AutoSize = true;
+            this.LB_NLivrosDisp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_NLivrosDisp.Location = new System.Drawing.Point(29, 136);
+            this.LB_NLivrosDisp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LB_NLivrosDisp.Name = "LB_NLivrosDisp";
+            this.LB_NLivrosDisp.Size = new System.Drawing.Size(258, 24);
+            this.LB_NLivrosDisp.TabIndex = 4;
+            this.LB_NLivrosDisp.Text = "Número de livros disponíveis:";
+            // 
+            // Panel_Autor
+            // 
+            this.Panel_Autor.Controls.Add(this.Panel_Autor_DGV);
+            this.Panel_Autor.Controls.Add(this.Panel_Autor_Top);
+            this.Panel_Autor.Location = new System.Drawing.Point(1000, 1000);
+            this.Panel_Autor.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel_Autor.Name = "Panel_Autor";
+            this.Panel_Autor.Size = new System.Drawing.Size(1087, 593);
+            this.Panel_Autor.TabIndex = 4;
+            // 
+            // Panel_Editora
+            // 
+            this.Panel_Editora.Controls.Add(this.Panel_Editora_DGV);
+            this.Panel_Editora.Controls.Add(this.Panel_Editora_Top);
+            this.Panel_Editora.Location = new System.Drawing.Point(1000, 1000);
+            this.Panel_Editora.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel_Editora.Name = "Panel_Editora";
+            this.Panel_Editora.Size = new System.Drawing.Size(1087, 593);
+            this.Panel_Editora.TabIndex = 5;
+            // 
+            // Panel_Autor_Top
+            // 
+            this.Panel_Autor_Top.Controls.Add(this.BTN_Autor_Cancelar);
+            this.Panel_Autor_Top.Controls.Add(this.BTN_Autor_OK);
+            this.Panel_Autor_Top.Controls.Add(this.textBox2);
+            this.Panel_Autor_Top.Controls.Add(this.textBox1);
+            this.Panel_Autor_Top.Controls.Add(this.BTN_Autor_Eliminar);
+            this.Panel_Autor_Top.Controls.Add(this.BTN_Autor_Inserir);
+            this.Panel_Autor_Top.Controls.Add(this.label2);
+            this.Panel_Autor_Top.Controls.Add(this.label1);
+            this.Panel_Autor_Top.Controls.Add(this.TB_Autor_Pesquisa);
+            this.Panel_Autor_Top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel_Autor_Top.Location = new System.Drawing.Point(0, 0);
+            this.Panel_Autor_Top.Name = "Panel_Autor_Top";
+            this.Panel_Autor_Top.Size = new System.Drawing.Size(1087, 188);
+            this.Panel_Autor_Top.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(7, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 24);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Apelido:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 24);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Nome: ";
+            // 
+            // TB_Autor_Pesquisa
+            // 
+            this.TB_Autor_Pesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Autor_Pesquisa.Location = new System.Drawing.Point(7, 8);
+            this.TB_Autor_Pesquisa.Name = "TB_Autor_Pesquisa";
+            this.TB_Autor_Pesquisa.Size = new System.Drawing.Size(1067, 28);
+            this.TB_Autor_Pesquisa.TabIndex = 3;
+            // 
+            // Panel_Autor_DGV
+            // 
+            this.Panel_Autor_DGV.Controls.Add(this.DGV_Autor);
+            this.Panel_Autor_DGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_Autor_DGV.Location = new System.Drawing.Point(0, 188);
+            this.Panel_Autor_DGV.Name = "Panel_Autor_DGV";
+            this.Panel_Autor_DGV.Size = new System.Drawing.Size(1087, 405);
+            this.Panel_Autor_DGV.TabIndex = 1;
+            // 
+            // BTN_Autor_Inserir
+            // 
+            this.BTN_Autor_Inserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Autor_Inserir.Location = new System.Drawing.Point(867, 136);
+            this.BTN_Autor_Inserir.Name = "BTN_Autor_Inserir";
+            this.BTN_Autor_Inserir.Size = new System.Drawing.Size(100, 32);
+            this.BTN_Autor_Inserir.TabIndex = 6;
+            this.BTN_Autor_Inserir.Text = "Inserir";
+            this.BTN_Autor_Inserir.UseVisualStyleBackColor = true;
+            // 
+            // BTN_Autor_Eliminar
+            // 
+            this.BTN_Autor_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Autor_Eliminar.Location = new System.Drawing.Point(973, 136);
+            this.BTN_Autor_Eliminar.Name = "BTN_Autor_Eliminar";
+            this.BTN_Autor_Eliminar.Size = new System.Drawing.Size(100, 32);
+            this.BTN_Autor_Eliminar.TabIndex = 7;
+            this.BTN_Autor_Eliminar.Text = "Eliminar";
+            this.BTN_Autor_Eliminar.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(108, 86);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(965, 22);
+            this.textBox1.TabIndex = 8;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(108, 54);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(965, 22);
+            this.textBox2.TabIndex = 9;
+            // 
+            // DGV_Autor
+            // 
+            this.DGV_Autor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Autor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DGV_Autor.Location = new System.Drawing.Point(0, 0);
+            this.DGV_Autor.Name = "DGV_Autor";
+            this.DGV_Autor.RowTemplate.Height = 24;
+            this.DGV_Autor.Size = new System.Drawing.Size(1087, 405);
+            this.DGV_Autor.TabIndex = 0;
+            // 
+            // Panel_Editora_Top
+            // 
+            this.Panel_Editora_Top.Controls.Add(this.BTN_Editora_Cancelar);
+            this.Panel_Editora_Top.Controls.Add(this.BTN_Editora_OK);
+            this.Panel_Editora_Top.Controls.Add(this.BTN_Editora_Eliminar);
+            this.Panel_Editora_Top.Controls.Add(this.BTN_Editora_Inserir);
+            this.Panel_Editora_Top.Controls.Add(this.textBox4);
+            this.Panel_Editora_Top.Controls.Add(this.textBox3);
+            this.Panel_Editora_Top.Controls.Add(this.label4);
+            this.Panel_Editora_Top.Controls.Add(this.label3);
+            this.Panel_Editora_Top.Controls.Add(this.TB_Editora_Pesquisa);
+            this.Panel_Editora_Top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel_Editora_Top.Location = new System.Drawing.Point(0, 0);
+            this.Panel_Editora_Top.Name = "Panel_Editora_Top";
+            this.Panel_Editora_Top.Size = new System.Drawing.Size(1087, 174);
+            this.Panel_Editora_Top.TabIndex = 0;
+            // 
+            // Panel_Editora_DGV
+            // 
+            this.Panel_Editora_DGV.Controls.Add(this.DGV_Editora);
+            this.Panel_Editora_DGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_Editora_DGV.Location = new System.Drawing.Point(0, 174);
+            this.Panel_Editora_DGV.Name = "Panel_Editora_DGV";
+            this.Panel_Editora_DGV.Size = new System.Drawing.Size(1087, 419);
+            this.Panel_Editora_DGV.TabIndex = 1;
+            // 
+            // DGV_Editora
+            // 
+            this.DGV_Editora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Editora.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DGV_Editora.Location = new System.Drawing.Point(0, 0);
+            this.DGV_Editora.Name = "DGV_Editora";
+            this.DGV_Editora.RowTemplate.Height = 24;
+            this.DGV_Editora.Size = new System.Drawing.Size(1087, 419);
+            this.DGV_Editora.TabIndex = 0;
+            // 
+            // TB_Editora_Pesquisa
+            // 
+            this.TB_Editora_Pesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Editora_Pesquisa.Location = new System.Drawing.Point(7, 12);
+            this.TB_Editora_Pesquisa.Name = "TB_Editora_Pesquisa";
+            this.TB_Editora_Pesquisa.Size = new System.Drawing.Size(1067, 28);
+            this.TB_Editora_Pesquisa.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(7, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 24);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Nome: ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(7, 84);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 24);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Morada: ";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(97, 86);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(977, 22);
+            this.textBox3.TabIndex = 3;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(97, 53);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(977, 22);
+            this.textBox4.TabIndex = 4;
+            // 
+            // BTN_Editora_Inserir
+            // 
+            this.BTN_Editora_Inserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Editora_Inserir.Location = new System.Drawing.Point(868, 130);
+            this.BTN_Editora_Inserir.Name = "BTN_Editora_Inserir";
+            this.BTN_Editora_Inserir.Size = new System.Drawing.Size(100, 32);
+            this.BTN_Editora_Inserir.TabIndex = 5;
+            this.BTN_Editora_Inserir.Text = "Inserir";
+            this.BTN_Editora_Inserir.UseVisualStyleBackColor = true;
+            // 
+            // BTN_Editora_Eliminar
+            // 
+            this.BTN_Editora_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Editora_Eliminar.Location = new System.Drawing.Point(974, 130);
+            this.BTN_Editora_Eliminar.Name = "BTN_Editora_Eliminar";
+            this.BTN_Editora_Eliminar.Size = new System.Drawing.Size(100, 32);
+            this.BTN_Editora_Eliminar.TabIndex = 6;
+            this.BTN_Editora_Eliminar.Text = "Eliminar";
+            this.BTN_Editora_Eliminar.UseVisualStyleBackColor = true;
+            // 
+            // BTN_Livro_OK
+            // 
+            this.BTN_Livro_OK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Livro_OK.ForeColor = System.Drawing.Color.Green;
+            this.BTN_Livro_OK.Location = new System.Drawing.Point(792, 177);
+            this.BTN_Livro_OK.Name = "BTN_Livro_OK";
+            this.BTN_Livro_OK.Size = new System.Drawing.Size(32, 32);
+            this.BTN_Livro_OK.TabIndex = 11;
+            this.BTN_Livro_OK.Text = "V";
+            this.BTN_Livro_OK.UseVisualStyleBackColor = true;
+            this.BTN_Livro_OK.Visible = false;
+            // 
+            // BTN_Livro_Cancelar
+            // 
+            this.BTN_Livro_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Livro_Cancelar.ForeColor = System.Drawing.Color.Red;
+            this.BTN_Livro_Cancelar.Location = new System.Drawing.Point(830, 177);
+            this.BTN_Livro_Cancelar.Name = "BTN_Livro_Cancelar";
+            this.BTN_Livro_Cancelar.Size = new System.Drawing.Size(32, 32);
+            this.BTN_Livro_Cancelar.TabIndex = 12;
+            this.BTN_Livro_Cancelar.Text = "X";
+            this.BTN_Livro_Cancelar.UseVisualStyleBackColor = true;
+            this.BTN_Livro_Cancelar.Visible = false;
+            // 
+            // BTN_Autor_Cancelar
+            // 
+            this.BTN_Autor_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Autor_Cancelar.ForeColor = System.Drawing.Color.Red;
+            this.BTN_Autor_Cancelar.Location = new System.Drawing.Point(829, 136);
+            this.BTN_Autor_Cancelar.Name = "BTN_Autor_Cancelar";
+            this.BTN_Autor_Cancelar.Size = new System.Drawing.Size(32, 32);
+            this.BTN_Autor_Cancelar.TabIndex = 14;
+            this.BTN_Autor_Cancelar.Text = "X";
+            this.BTN_Autor_Cancelar.UseVisualStyleBackColor = true;
+            this.BTN_Autor_Cancelar.Visible = false;
+            // 
+            // BTN_Autor_OK
+            // 
+            this.BTN_Autor_OK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Autor_OK.ForeColor = System.Drawing.Color.Green;
+            this.BTN_Autor_OK.Location = new System.Drawing.Point(791, 136);
+            this.BTN_Autor_OK.Name = "BTN_Autor_OK";
+            this.BTN_Autor_OK.Size = new System.Drawing.Size(32, 32);
+            this.BTN_Autor_OK.TabIndex = 13;
+            this.BTN_Autor_OK.Text = "V";
+            this.BTN_Autor_OK.UseVisualStyleBackColor = true;
+            this.BTN_Autor_OK.Visible = false;
+            // 
+            // BTN_Editora_Cancelar
+            // 
+            this.BTN_Editora_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Editora_Cancelar.ForeColor = System.Drawing.Color.Red;
+            this.BTN_Editora_Cancelar.Location = new System.Drawing.Point(830, 130);
+            this.BTN_Editora_Cancelar.Name = "BTN_Editora_Cancelar";
+            this.BTN_Editora_Cancelar.Size = new System.Drawing.Size(32, 32);
+            this.BTN_Editora_Cancelar.TabIndex = 14;
+            this.BTN_Editora_Cancelar.Text = "X";
+            this.BTN_Editora_Cancelar.UseVisualStyleBackColor = true;
+            this.BTN_Editora_Cancelar.Visible = false;
+            // 
+            // BTN_Editora_OK
+            // 
+            this.BTN_Editora_OK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Editora_OK.ForeColor = System.Drawing.Color.Green;
+            this.BTN_Editora_OK.Location = new System.Drawing.Point(792, 130);
+            this.BTN_Editora_OK.Name = "BTN_Editora_OK";
+            this.BTN_Editora_OK.Size = new System.Drawing.Size(32, 32);
+            this.BTN_Editora_OK.TabIndex = 13;
+            this.BTN_Editora_OK.Text = "V";
+            this.BTN_Editora_OK.UseVisualStyleBackColor = true;
+            this.BTN_Editora_OK.Visible = false;
             // 
             // Form1
             // 
@@ -473,12 +757,20 @@
             this.Panel_Home_Cabecalho.ResumeLayout(false);
             this.Panel_Home_Cabecalho.PerformLayout();
             this.Panel_Livro.ResumeLayout(false);
-            this.Panel_Autor.ResumeLayout(false);
-            this.Panel_Editora.ResumeLayout(false);
-            this.Panel_Livro_Top.ResumeLayout(false);
-            this.Panel_Livro_Top.PerformLayout();
             this.Panel_Livro_DGV.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Livro)).EndInit();
+            this.Panel_Livro_Top.ResumeLayout(false);
+            this.Panel_Livro_Top.PerformLayout();
+            this.Panel_Autor.ResumeLayout(false);
+            this.Panel_Editora.ResumeLayout(false);
+            this.Panel_Autor_Top.ResumeLayout(false);
+            this.Panel_Autor_Top.PerformLayout();
+            this.Panel_Autor_DGV.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Autor)).EndInit();
+            this.Panel_Editora_Top.ResumeLayout(false);
+            this.Panel_Editora_Top.PerformLayout();
+            this.Panel_Editora_DGV.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Editora)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -493,9 +785,7 @@
         private System.Windows.Forms.Panel Panel_Home;
         private System.Windows.Forms.Panel Panel_Livro;
         private System.Windows.Forms.Panel Panel_Autor;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel Panel_Editora;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel Panel_Home_DGV;
         private System.Windows.Forms.DataGridView DGV_Home;
         private System.Windows.Forms.Panel Panel_Home_Cabecalho;
@@ -521,6 +811,32 @@
         private System.Windows.Forms.Panel Panel_Livro_Top;
         private System.Windows.Forms.Button BTN_Livro_Inserir;
         private System.Windows.Forms.Button BTN_Livro_Eliminar;
+        private System.Windows.Forms.Panel Panel_Autor_DGV;
+        private System.Windows.Forms.DataGridView DGV_Autor;
+        private System.Windows.Forms.Panel Panel_Autor_Top;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button BTN_Autor_Eliminar;
+        private System.Windows.Forms.Button BTN_Autor_Inserir;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TB_Autor_Pesquisa;
+        private System.Windows.Forms.Panel Panel_Editora_DGV;
+        private System.Windows.Forms.DataGridView DGV_Editora;
+        private System.Windows.Forms.Panel Panel_Editora_Top;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TB_Editora_Pesquisa;
+        private System.Windows.Forms.Button BTN_Editora_Eliminar;
+        private System.Windows.Forms.Button BTN_Editora_Inserir;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button BTN_Livro_Cancelar;
+        private System.Windows.Forms.Button BTN_Livro_OK;
+        private System.Windows.Forms.Button BTN_Autor_Cancelar;
+        private System.Windows.Forms.Button BTN_Autor_OK;
+        private System.Windows.Forms.Button BTN_Editora_Cancelar;
+        private System.Windows.Forms.Button BTN_Editora_OK;
     }
 }
 
