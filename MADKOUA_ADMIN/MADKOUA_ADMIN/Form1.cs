@@ -217,6 +217,9 @@ namespace MADKOUA_ADMIN
 
         }
 
+        private void DGV_Home_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }
 }
