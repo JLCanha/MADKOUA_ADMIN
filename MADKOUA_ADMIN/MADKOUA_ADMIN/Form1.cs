@@ -13,11 +13,8 @@ namespace MADKOUA_ADMIN
 {
     public partial class Form1 : Form
     {
-        DataTable TabelaRequisicao;
+
         DataTable TabelaLivros;
-        DataTable TabelaAutores;
-        DataTable TabelaEditoras;
-        DataTable TabelaHome;
 
         DataTable Requisicoes;
         DataTable Livros;
@@ -64,6 +61,7 @@ namespace MADKOUA_ADMIN
         {
 
             init();
+
 
         }
 
@@ -143,8 +141,8 @@ namespace MADKOUA_ADMIN
             LivroSelecionado.ID = (int)DGV_Livro.Rows[RowIndex].Cells["ID"].Value;
             TB_Livro_Titulo.Text = LivroSelecionado.Titulo;
             TB_Livro_Autor.Text = LivroSelecionado.autor.Nome + LivroSelecionado.autor.Apelido;
-            TB_Livro_Edicao.Text = LivroSelecionado.editora.Nome;
-            TB_Livro_Editora.Text = LivroSelecionado.Edicao.ToString();
+            TB_Livro_Edicao.Text = LivroSelecionado.Edicao.ToString();
+            TB_Livro_Editora.Text = LivroSelecionado.editora.Nome;
             TB_Livro_ISBN.Text = LivroSelecionado.ISBN;
             TB_Livro_NLivrosDisp.Text = LivroSelecionado.NLivrosDisp.ToString();
         }
@@ -158,12 +156,6 @@ namespace MADKOUA_ADMIN
             TabelaLivros.Columns.Add("ISBN", typeof(String));
             TabelaLivros.Columns.Add("Edição", typeof(int));
 
-            DGV_Livro.Columns[0].Width = 30;
-            DGV_Livro.Columns[1].Width = DGV_Livro.Width / 5;
-            DGV_Livro.Columns[2].Width = DGV_Livro.Width / 5;
-            DGV_Livro.Columns[3].Width = DGV_Livro.Width / 5;
-            DGV_Livro.Columns[4].Width = DGV_Livro.Width / 5;
-            DGV_Livro.Columns[5].Width = DGV_Livro.Width / 5;
         }
 
         private void ApresentaLivros(String pesquisa)
@@ -204,15 +196,17 @@ namespace MADKOUA_ADMIN
 
         private void BTN_Livro_OK_Click(object sender, EventArgs e)
         {
-        
 
-
+            AddBD.AdicionaLivro(AutorInsercaoSelecionado, EditoraInsercaoSelecionada, TB_Livro_Titulo.Text, Int32.Parse(TB_Livro_Edicao.Text), TB_Livro_ISBN.Text, Int32.Parse(TB_Livro_NLivrosDisp.Text));
+            LimpaInsercaoLivro();
+            AtualizaGrids();
         }
 
         private void BTN_Livro_Eliminar_Click(object sender, EventArgs e)
         {
 
-
+            Livro.EliminaLivro(LivroSelecionado.ID);
+            AtualizaGrids();
 
         }
 
@@ -222,6 +216,7 @@ namespace MADKOUA_ADMIN
             BTN_Livro_OK.Visible = false;
             BTN_Livro_Inserir.Enabled = true;
             BTN_Livro_Eliminar.Enabled = true;
+            DGV_Livro.Enabled = true;
             TB_Livro_Titulo.Text = "";
             TB_Livro_Autor.Text = "";
             TB_Livro_Editora.Text = "";
@@ -260,6 +255,7 @@ namespace MADKOUA_ADMIN
         {
             AddBD.AdicionaAutor(TB_Autor_Nome.Text, TB_Autor_Apelido.Text);
             LimpaInsercaoAutor();
+            AtualizaGrids();
         }
 
         private void DGV_Autor_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -312,6 +308,7 @@ namespace MADKOUA_ADMIN
 
             AddBD.AdicionaEditora(TB_Editora_Nome.Text, TB_Editora_Morada.Text);
             LimpaInsercaoEditora();
+            AtualizaGrids();
 
         }
 
@@ -340,22 +337,62 @@ namespace MADKOUA_ADMIN
 
         private void init()
         {
-            Requisicoes = Requisicao.ListaRequisicao();
-            Livros = Livro.ListaLivros();
-            Autores = Autor.ListaAutores();
-            Editoras = Editora.ListaEditoras();
 
-            DGV_Home.DataSource = Requisicoes;
-            DGV_Livro.DataSource = Livros;
-            DGV_Editora.DataSource = Editoras;
-            DGV_Autor.DataSource = Autores;
-
+            Panel_SelecaoEditora.Visible = false;
+            Panel_Selecao_Autor.Visible = false;
 
             InicializaLivros();
+
+            AtualizaGrids();
+
+
             ApresentaLivros("");
         }
 
 
         #endregion
+
+        private void BTN_Livro_Autor_Selecionar_Click(object sender, EventArgs e)
+        {
+            Panel_Selecao_Autor.Visible = !Panel_Selecao_Autor.Visible;
+        }
+
+        private void BTN_Livro_Editora_Selecionar_Click(object sender, EventArgs e)
+        {
+            Panel_SelecaoEditora.Visible = !Panel_SelecaoEditora.Visible;
+        }
+
+        private void DGV_Livro_Autor_Selecao_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int RowIndex = DGV_Livro_Autor_Selecao.SelectedCells[0].RowIndex;
+            AutorInsercaoSelecionado.ID = (int)DGV_Livro_Autor_Selecao.Rows[RowIndex].Cells["ID"].Value;
+            TB_Livro_Autor.Text = AutorInsercaoSelecionado.Nome + " " + AutorInsercaoSelecionado.Apelido;
+            Panel_Selecao_Autor.Visible = false;
+        }
+
+        private void DGV_Livro_Editora_Selecao_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int RowIndex = DGV_Livro_Editora_Selecao.SelectedCells[0].RowIndex;
+            EditoraInsercaoSelecionada.ID = (int) DGV_Livro_Editora_Selecao.Rows[RowIndex].Cells["ID"].Value;
+            TB_Livro_Editora.Text = EditoraInsercaoSelecionada.Nome;
+            Panel_SelecaoEditora.Visible = false;
+        }
+
+        private void AtualizaGrids()
+        {
+
+            Requisicoes = Requisicao.ListaRequisicao();
+            Livros = Livro.ListaLivros();
+            Autores = Autor.ListaAutores();
+            Editoras = Editora.ListaEditoras();
+
+
+            DGV_Home.DataSource = Requisicoes;
+            ApresentaLivros("");
+            DGV_Editora.DataSource = Editoras;
+            DGV_Autor.DataSource = Autores;
+            DGV_Livro_Autor_Selecao.DataSource = Autores;
+            DGV_Livro_Editora_Selecao.DataSource = Editoras;
+        }
     }
 }
