@@ -108,19 +108,44 @@ namespace MADKOUA_ADMIN
 
         private void BTN_Home_Devolucao_Click(object sender, EventArgs e)
         {
-            Requisicao.MudaEstado(RequisicaoSelecionada.ID, "DevolvidoABib");
+            RequisicaoSelecionada.Estado = "DevolvidoABib";
+            Requisicao.MudaEstado(RequisicaoSelecionada.ID, RequisicaoSelecionada.Estado);
+
             Livro.IncrementaNLivrosDisp(RequisicaoSelecionada.livro.ID);
+            AtualizaGrids();
+            AtualizaReqCabecalho();
+            BTN_Devolucao.Enabled = false;
         }
 
         private void BTN_Home_Entrega_Click(object sender, EventArgs e)
         {
-            Requisicao.MudaEstado(RequisicaoSelecionada.ID, "PorDevolver");
+            RequisicaoSelecionada.Estado = "PorDevolver";
+            Requisicao.MudaEstado(RequisicaoSelecionada.ID, RequisicaoSelecionada.Estado);
+
+            AtualizaGrids();
+            AtualizaReqCabecalho();
+            BTN_Entrega.Enabled = false;
+            BTN_Devolucao.Enabled = true;
         }
 
         private void DGV_Home_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int RowIndex = DGV_Home.SelectedCells[0].RowIndex;
             RequisicaoSelecionada.ID = (int)DGV_Home.Rows[RowIndex].Cells["ID"].Value;
+            if(RequisicaoSelecionada.Estado == "PorLevantar")
+            {
+                BTN_Entrega.Enabled = true;
+            }
+            else if(RequisicaoSelecionada.Estado == "PorDevolver")
+            {
+                BTN_Devolucao.Enabled = true;
+            }
+
+            AtualizaReqCabecalho();
+        }
+
+        private void AtualizaReqCabecalho()
+        {
             TB_Home_Requisitante.Text = RequisicaoSelecionada.requisitante.Nome;
             TB_Home_Livro.Text = RequisicaoSelecionada.livro.Titulo;
             TB_Home_Estado.Text = RequisicaoSelecionada.Estado;
@@ -347,6 +372,9 @@ namespace MADKOUA_ADMIN
 
 
             ApresentaLivros("");
+
+            BTN_Devolucao.Enabled = false;
+            BTN_Entrega.Enabled = false;
         }
 
 
@@ -356,7 +384,7 @@ namespace MADKOUA_ADMIN
         {
             Panel_Selecao_Autor.Visible = !Panel_Selecao_Autor.Visible;
         }
-
+            
         private void BTN_Livro_Editora_Selecionar_Click(object sender, EventArgs e)
         {
             Panel_SelecaoEditora.Visible = !Panel_SelecaoEditora.Visible;

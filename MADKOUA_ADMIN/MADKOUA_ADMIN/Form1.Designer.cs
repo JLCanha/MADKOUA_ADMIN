@@ -321,7 +321,7 @@
             // 
             this.Panel_Livro.Controls.Add(this.Panel_Livro_DGV);
             this.Panel_Livro.Controls.Add(this.Panel_Livro_Top);
-            this.Panel_Livro.Location = new System.Drawing.Point(7100, 0);
+            this.Panel_Livro.Location = new System.Drawing.Point(71, 0);
             this.Panel_Livro.Margin = new System.Windows.Forms.Padding(4);
             this.Panel_Livro.Name = "Panel_Livro";
             this.Panel_Livro.Size = new System.Drawing.Size(1087, 593);
@@ -580,7 +580,7 @@
             // 
             this.Panel_Autor.Controls.Add(this.Panel_Autor_DGV);
             this.Panel_Autor.Controls.Add(this.Panel_Autor_Top);
-            this.Panel_Autor.Location = new System.Drawing.Point(7100, 0);
+            this.Panel_Autor.Location = new System.Drawing.Point(71, 0);
             this.Panel_Autor.Margin = new System.Windows.Forms.Padding(4);
             this.Panel_Autor.Name = "Panel_Autor";
             this.Panel_Autor.Size = new System.Drawing.Size(1087, 593);
@@ -728,7 +728,7 @@
             // 
             this.Panel_Editora.Controls.Add(this.Panel_Editora_DGV);
             this.Panel_Editora.Controls.Add(this.Panel_Editora_Top);
-            this.Panel_Editora.Location = new System.Drawing.Point(7100, 0);
+            this.Panel_Editora.Location = new System.Drawing.Point(71, 0);
             this.Panel_Editora.Margin = new System.Windows.Forms.Padding(4);
             this.Panel_Editora.Name = "Panel_Editora";
             this.Panel_Editora.Size = new System.Drawing.Size(1085, 593);
