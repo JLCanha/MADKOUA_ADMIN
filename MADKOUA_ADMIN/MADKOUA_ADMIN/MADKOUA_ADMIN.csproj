@@ -33,8 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MADKOUA_BIB">
-      <HintPath>..\..\..\..\..\Downloads\MADKOUA_BIB.dll</HintPath>
+    <Reference Include="MADKOUA_BIB, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\MADKOUA_BIB.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
